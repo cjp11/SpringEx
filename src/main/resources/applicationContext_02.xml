@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 생성자를 이용한 의존성 주입(DI) -->
+	<!-- 생성자에 전달되는 값 순서 sony, 100000 -->
+	<bean id="tv2Samsung" class="polymorphism02.SamsungTV">
+		<constructor-arg ref="sony" />
+		<constructor-arg value='100000'/>
+	</bean>
+	
+	<bean id="sony" class="polymorphism02.SonySpeaker" />
+</beans>
